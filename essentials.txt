@@ -1,0 +1,34 @@
+https://developer.apple.com/downloads/
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install gcc
+brew install python3
+brew tap kn1kn1/cfdg
+brew install kn1kn1/cfdg/cfdg
+
+curl -sL https://raw.githubusercontent.com/brainsik/virtualenv-burrito/master/virtualenv-burrito.sh | $SHELL
+
+mkdir Applications
+cd Downloads
+
+curl -O http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg
+
+curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+
+curl -L https://central.github.com/mac/latest -o github.zip
+
+curl -L https://www.dropbox.com/s/y33ij0gv1uucpqi/FileMerge.app.zip?dl=1 -o FileMerge.app.zip
+
+curl -L http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.8/OmniGraffle-6.0.5.dmg -o OmniGraffle.dmg
+
+curl -L https://github.com/ridiculousfish/HexFiend/releases/download/v2.3.0/Hex.Fiend.app.zip -o Hex.Fiend.app.zip
+
+curl -O https://steamcdn-a.akamaihd.net/client/installer/steam.dmg
+
+open *.zip
+
+open *.dmg
+
+mv *.app ../Applications
+
