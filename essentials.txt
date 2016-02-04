@@ -32,6 +32,8 @@ curl -L https://github.com/ridiculousfish/HexFiend/releases/download/v2.3.0/Hex.
 
 curl -O https://steamcdn-a.akamaihd.net/client/installer/steam.dmg
 
+curl -L http://papersapp.com/papers2/download -o papers_281.dmg
+
 open *.zip
 
 open *.dmg
