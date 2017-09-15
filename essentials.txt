@@ -22,11 +22,12 @@ curl -sL https://raw.githubusercontent.com/brainsik/virtualenv-burrito/master/vi
 
 mkdir Applications
 
+#get dropbox set up and syncing ASAP
+brew cask install dropbox --appdir=~/Applications
+open ~/Applications/Dropbox.app
+brew cask install google-chrome --appdir=~/Applications
 brew cask install vlc --appdir=~/Applications
 brew cask install sublime-text --appdir=~/Applications
-brew cask install dropbox --appdir=~/Applications
-#get dropbox set up and syncing ASAP
-open ~/Applications/Dropbox.app
 brew cask install resilio-sync --appdir=~/Applications
 brew cask install google-chrome --appdir=~/Applications
 brew cask install google-earth-pro --appdir=~/Applications
@@ -37,10 +38,13 @@ brew cask install hex-fiend --appdir=~/Applications
 brew cask install github-desktop --appdir=~/Applications
 brew cask install nicecast --appdir=~/Applications
 
+brew cask cleanup
+
 #others
 #brew cask install papers --appdir=~/Applications
 curl -L http://papersapp.com/papers2/download -o ~/Downloads/papers_281.dmg
 curl -L http://support.apple.com/downloads/DL923/en_US/QuickTimePlayer7.6.6_SnowLeopard.dmg -o ~/Downloads/QuickTimePlayer7.6.6_SnowLeopard.dmg
+
 
 open ~/Downloads/*.dmg
 open ~/Applications/*.app
