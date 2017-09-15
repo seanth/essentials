@@ -21,37 +21,24 @@ curl -sL https://raw.githubusercontent.com/brainsik/virtualenv-burrito/master/vi
 #experiments with brew cask
 
 mkdir Applications
-cd Downloads
 
-curl -L http://support.apple.com/downloads/DL923/en_US/QuickTimePlayer7.6.6_SnowLeopard.dmg -o QuickTimePlayer7.6.6_SnowLeopard.dmg
+brew cask install vlc --appdir=~/Applications
+brew cask install sublime-text --appdir=~/Applications
+brew cask install dropbox --appdir=~/Applications
+brew cask install resilio-sync --appdir=~/Applications
+brew cask install google-chrome --appdir=~/Applications
+brew cask install google-earth-pro --appdir=~/Applications
+brew cask install omnigraffle6 --appdir=~/Applications
+brew cask install context-free --appdir=~/Applications
+brew cask install steam --appdir=~/Applications
+brew cask install hex-fiend --appdir=~/Applications
+brew cask install github-desktop --appdir=~/Applications
+brew cask install nicecast --appdir=~/Applications
 
-curl -L https://dl.google.com/earth/client/GE7/release_7_3_0/googleearth-pro-7.3.0.3832.dmg -o googleEarthPro-7.3.0.3832.dmg
+#others
+#brew cask install papers --appdir=~/Applications
+curl -L http://papersapp.com/papers2/download -o ~/Downloads/papers_281.dmg
+curl -L http://support.apple.com/downloads/DL923/en_US/QuickTimePlayer7.6.6_SnowLeopard.dmg -o ~/Downloads/QuickTimePlayer7.6.6_SnowLeopard.dmg
 
-curl -O http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg
-
-curl -L https://www.dropbox.com/download?plat=mac -o dropboxInstaller.dmg
-
-curl -L https://central.github.com/mac/latest -o github.zip
-
-curl -L http://get.videolan.org/vlc/2.2.1/macosx/vlc-2.2.1.dmg -o vlc.dmg
-
-curl -L https://download-cdn.resilio.com/stable/osx/Resilio-Sync.dmg -o Resilio-Sync.dmg
-
-curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-
-curl -L https://www.dropbox.com/s/y33ij0gv1uucpqi/FileMerge.app.zip?dl=1 -o FileMerge.app.zip
-
-curl -L http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.8/OmniGraffle-6.0.5.dmg -o OmniGraffle.dmg
-
-curl -L https://github.com/ridiculousfish/HexFiend/releases/download/v2.3.0/Hex.Fiend.app.zip -o Hex.Fiend.app.zip
-
-curl -O https://steamcdn-a.akamaihd.net/client/installer/steam.dmg
-
-curl -L http://papersapp.com/papers2/download -o papers_281.dmg
-
-open *.zip
-
-open *.dmg
-
-mv *.app ../Applications
-
+open ~/Downloads/*.dmg
+open ~/Applications/*.app
