@@ -25,6 +25,8 @@ mkdir Applications
 brew cask install vlc --appdir=~/Applications
 brew cask install sublime-text --appdir=~/Applications
 brew cask install dropbox --appdir=~/Applications
+#get dropbox set up and syncing ASAP
+open ~/Applications/Dropbox.app
 brew cask install resilio-sync --appdir=~/Applications
 brew cask install google-chrome --appdir=~/Applications
 brew cask install google-earth-pro --appdir=~/Applications
