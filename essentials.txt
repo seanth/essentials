@@ -37,6 +37,7 @@ brew cask install steam --appdir=~/Applications
 brew cask install hex-fiend --appdir=~/Applications
 brew cask install github-desktop --appdir=~/Applications
 brew cask install nicecast --appdir=~/Applications
+brew cask install slack --appdir=~/Applications
 
 brew cask cleanup
 
