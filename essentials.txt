@@ -1,5 +1,7 @@
-https://developer.apple.com/downloads/
+#let's install xcode
+xcode-select --install
 
+#install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install gcc
@@ -7,22 +9,35 @@ brew install python3
 brew tap kn1kn1/cfdg
 brew install kn1kn1/cfdg/cfdg
 
+brew install numpy
+brew install pillow
+
+brew install pypy
+pypy -m pip install git+https://bitbucket.org/pypy/numpy.git
+pypy -m pip install pillow
+
 curl -sL https://raw.githubusercontent.com/brainsik/virtualenv-burrito/master/virtualenv-burrito.sh | $SHELL
+
+#experiments with brew cask
 
 mkdir Applications
 cd Downloads
 
-curl -O http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg
+curl -L http://support.apple.com/downloads/DL923/en_US/QuickTimePlayer7.6.6_SnowLeopard.dmg -o QuickTimePlayer7.6.6_SnowLeopard.dmg
 
-curl -L http://get.videolan.org/vlc/2.2.1/macosx/vlc-2.2.1.dmg -o vlc.dmg
+curl -L https://dl.google.com/earth/client/GE7/release_7_3_0/googleearth-pro-7.3.0.3832.dmg -o googleEarthPro-7.3.0.3832.dmg
+
+curl -O http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg
 
 curl -L https://www.dropbox.com/download?plat=mac -o dropboxInstaller.dmg
 
-curl -L https://download.owncloud.com/desktop/stable/ownCloud-2.0.1.2694.pkg -o ownCloud.pkg
+curl -L https://central.github.com/mac/latest -o github.zip
+
+curl -L http://get.videolan.org/vlc/2.2.1/macosx/vlc-2.2.1.dmg -o vlc.dmg
+
+curl -L https://download-cdn.resilio.com/stable/osx/Resilio-Sync.dmg -o Resilio-Sync.dmg
 
 curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-
-curl -L https://central.github.com/mac/latest -o github.zip
 
 curl -L https://www.dropbox.com/s/y33ij0gv1uucpqi/FileMerge.app.zip?dl=1 -o FileMerge.app.zip
 
