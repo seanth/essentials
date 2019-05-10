@@ -38,6 +38,7 @@ brew cask install hex-fiend --appdir=~/Applications
 brew cask install github-desktop --appdir=~/Applications
 brew cask install nicecast --appdir=~/Applications
 brew cask install slack --appdir=~/Applications
+brew cask install audio-hijack --appdir=~/Applications
 
 brew cask cleanup
 
@@ -46,6 +47,13 @@ brew cask cleanup
 curl -L http://papersapp.com/papers2/download -o ~/Downloads/papers_281.dmg
 curl -L http://support.apple.com/downloads/DL923/en_US/QuickTimePlayer7.6.6_SnowLeopard.dmg -o ~/Downloads/QuickTimePlayer7.6.6_SnowLeopard.dmg
 
+brew install mas
+mas lucky garageband
+mas lucky imovie
 
 open ~/Downloads/*.dmg
 open ~/Applications/*.app
+
+pip install plistlib
+curl -L https://github.com/kcrawford/dockutil/archive/master.zip
+unzip dockutil-master.zip
