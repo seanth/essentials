@@ -36,13 +36,19 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 brew install gcc
 brew install python3
+#brew install ffmpeg
 brew tap kn1kn1/cfdg
 brew install kn1kn1/cfdg/cfdg
 
-brew install numpy
+#brew install numpy
 #brew install pillow
 
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o ~/Downloads/get-pip2.7.py
+python ~/Downloads/get-pip2.7.py
+curl https://bootstrap.pypa.io/get-pip.py -o ~/Downloads/get-pip.py
+python3 ~/Downloads/get-pip.py
 brew install pypy
+pypy ~/Downloads/get-pip.py
 pypy -m pip install git+https://bitbucket.org/pypy/numpy.git
 #pypy -m pip install pillow
 
@@ -73,11 +79,17 @@ brew cask install audio-hijack --appdir=~/Applications
 #brew cask install papers --appdir=~/Applications
 curl -L http://papersapp.com/papers2/download -o ~/Downloads/papers_281.dmg
 curl -L http://support.apple.com/downloads/DL923/en_US/QuickTimePlayer7.6.6_SnowLeopard.dmg -o ~/Downloads/QuickTimePlayer7.6.6_SnowLeopard.dmg
-curl -L https://downloads.omnigroup.com/software/MacOSX/10.10/OmniGraffle-6.6.2.dmg
+curl -L https://downloads.omnigroup.com/software/MacOSX/10.10/OmniGraffle-6.6.2.dmg -o ~/Downloads/OmniGraffle-6.6.2.dmg
 
+
+####for mac os 10.11
+#curl -L  https://updates.cdn-apple.com/2019/cert/061-41823-20191025-5efc5a59-d7dc-46d3-9096-396bb8cb4a73/SwiftRuntimeForCommandLineTools.dmg -o ~/Downloads/SwiftRuntimeForCommandLineTools.dmg
+#brew tap mas-cli/tap
+#brew install mas-cli/tap/mas
 brew install mas
 mas lucky garageband
 mas lucky imovie
+
 
 open ~/Downloads/*.dmg
 open ~/Applications/*.app
