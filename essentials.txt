@@ -84,13 +84,6 @@ curl -L http://papersapp.com/papers2/download -o ~/Downloads/papers_281.dmg
 curl -L http://support.apple.com/downloads/DL923/en_US/QuickTimePlayer7.6.6_SnowLeopard.dmg -o ~/Downloads/QuickTimePlayer7.6.6_SnowLeopard.dmg
 curl -L https://downloads.omnigroup.com/software/MacOSX/10.10/OmniGraffle-6.6.2.dmg -o ~/Downloads/OmniGraffle-6.6.2.dmg
 
-<<<<<<< HEAD
-#brew install mas
-#mas lucky garageband
-#mas lucky imovie
-
-=======
-
 ####for mac os 10.11
 #curl -L  https://updates.cdn-apple.com/2019/cert/061-41823-20191025-5efc5a59-d7dc-46d3-9096-396bb8cb4a73/SwiftRuntimeForCommandLineTools.dmg -o ~/Downloads/SwiftRuntimeForCommandLineTools.dmg
 #brew tap mas-cli/tap
@@ -98,7 +91,7 @@ curl -L https://downloads.omnigroup.com/software/MacOSX/10.10/OmniGraffle-6.6.2.
 brew install mas
 mas lucky garageband
 mas lucky imovie
->>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
+
 
 
 open ~/Downloads/*.dmg
