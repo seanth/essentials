@@ -1,32 +1,21 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 mkdir Applications
 
 sudo softwareupdate --install-rosetta
-=======
-#let's install xcode
-#xcode-select --install
-
-mkdir Applications
->>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
 
 #install homebrew
 #ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-<<<<<<< HEAD
 echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/tester/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/tester/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
-=======
->>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
 
 brew install gcc
 brew install python3
 brew install ffmpeg
 brew tap kn1kn1/cfdg
 brew install kn1kn1/cfdg/cfdg
-<<<<<<< HEAD
 brew install mas
 ###x86_64 needed
 #brew install pypy
@@ -35,23 +24,12 @@ brew install mas
 brew install --cask dropbox --appdir=~/Applications
 Say "ping"
 open ~/Applications/Dropbox.app
-=======
-brew install pypy
-
-#get dropbox set up and syncing ASAP
-brew install --cask dropbox --appdir=~/Applications
-open Dropbox.app
->>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
 
 brew install --cask google-chrome --appdir=~/Applications
 brew install --cask vlc --appdir=~/Applications
 brew install --cask sublime-text --appdir=~/Applications
 brew install --cask resilio-sync --appdir=~/Applications
-<<<<<<< HEAD
 brew install --cask google-earth-pro
-=======
-brew install --cask google-earth-pro --appdir=~/Applications
->>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
 brew install --cask omnigraffle --appdir=~/Applications
 brew install --cask context-free --appdir=~/Applications
 brew install --cask steam --appdir=~/Applications
@@ -60,11 +38,7 @@ brew install --cask github --appdir=~/Applications
 brew install --cask slack --appdir=~/Applications
 brew install --cask audio-hijack --appdir=~/Applications
 brew install --cask miniconda --appdir=~/Applications
-<<<<<<< HEAD
 brew install --cask zoom
-=======
-brew install --cask zoom --appdir=~/Applications
->>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
 
 
 ###mas requires Swift 5 runtime support
@@ -75,7 +49,6 @@ curl -L https://github.com/kcrawford/dockutil/releases/download/3.0.2/dockutil-3
 curl -L https://bootstrap.pypa.io/pip/2.7/get-pip.py -o ~/Downloads/get-pip2.7.py
 curl -L https://bootstrap.pypa.io/get-pip.py -o ~/Downloads/get-pip.py
 
-<<<<<<< HEAD
 open ~/Applications/*.app
 open ~/Dropbox/_*.txt
 open ~/Downloads/*.dmg
@@ -129,20 +102,4 @@ dockutil --add ./Applications/"Steam.app" --no-restart
 dockutil --add /Users/tester/Downloads --before Trash
 
 say "done" 
-=======
-#brew tap mas-cli/tap
-#brew install mas-cli/tap/mas
-brew install mas
-# mas lucky garageband
-# mas lucky imovie
 
-python ~/Downloads/get-pip2.7.py
-python3 ~/Downloads/get-pip.py
-pypy ~/Downloads/get-pip.py
-pypy -m pip install git+https://bitbucket.org/pypy/numpy.git
-
-open ~/Downloads/*.dmg
-open ~/Downloads/*.pkg
-open ~/Applications/*.app
-open ~/Dropbox/_*.txt
->>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
