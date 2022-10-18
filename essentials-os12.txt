@@ -1,0 +1,61 @@
+#!/bin/bash
+
+#let's install xcode
+#xcode-select --install
+
+mkdir Applications
+
+#install homebrew
+#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install gcc
+brew install python3
+brew install ffmpeg
+brew tap kn1kn1/cfdg
+brew install kn1kn1/cfdg/cfdg
+brew install pypy
+
+#get dropbox set up and syncing ASAP
+brew install --cask dropbox --appdir=~/Applications
+open Dropbox.app
+
+brew install --cask google-chrome --appdir=~/Applications
+brew install --cask vlc --appdir=~/Applications
+brew install --cask sublime-text --appdir=~/Applications
+brew install --cask resilio-sync --appdir=~/Applications
+brew install --cask google-earth-pro --appdir=~/Applications
+brew install --cask omnigraffle --appdir=~/Applications
+brew install --cask context-free --appdir=~/Applications
+brew install --cask steam --appdir=~/Applications
+brew install --cask hex-fiend --appdir=~/Applications
+brew install --cask github --appdir=~/Applications
+brew install --cask slack --appdir=~/Applications
+brew install --cask audio-hijack --appdir=~/Applications
+brew install --cask miniconda --appdir=~/Applications
+brew install --cask zoom --appdir=~/Applications
+
+
+###mas requires Swift 5 runtime support
+curl -L  https://updates.cdn-apple.com/2019/cert/061-41823-20191025-5efc5a59-d7dc-46d3-9096-396bb8cb4a73/SwiftRuntimeForCommandLineTools.dmg -o ~/Downloads/SwiftRuntimeForCommandLineTools.dmg
+
+curl -L https://www.python.org/ftp/python/2.7.18/python-2.7.18-macosx10.9.pkg -o ~/Downloads/python-2.7.18-macosx10.9.pkg
+curl -L https://github.com/kcrawford/dockutil/releases/download/3.0.2/dockutil-3.0.2.pkg -o ~/Downloads/dockutil-3.0.2.pkg
+curl -L https://bootstrap.pypa.io/pip/2.7/get-pip.py -o ~/Downloads/get-pip2.7.py
+curl -L https://bootstrap.pypa.io/get-pip.py -o ~/Downloads/get-pip.py
+
+#brew tap mas-cli/tap
+#brew install mas-cli/tap/mas
+brew install mas
+# mas lucky garageband
+# mas lucky imovie
+
+python ~/Downloads/get-pip2.7.py
+python3 ~/Downloads/get-pip.py
+pypy ~/Downloads/get-pip.py
+pypy -m pip install git+https://bitbucket.org/pypy/numpy.git
+
+open ~/Downloads/*.dmg
+open ~/Downloads/*.pkg
+open ~/Applications/*.app
+open ~/Dropbox/_*.txt
