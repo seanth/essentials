@@ -55,6 +55,7 @@ mkdir Applications
 #get dropbox set up and syncing ASAP
 brew cask install dropbox --appdir=~/Applications
 open ~/Applications/Dropbox.app
+ 
 brew cask install google-chrome --appdir=~/Applications
 brew cask install vlc --appdir=~/Applications
 brew cask install sublime-text --appdir=~/Applications
@@ -71,21 +72,94 @@ brew cask install audio-hijack --appdir=~/Applications
 
 #others
 #brew cask install papers --appdir=~/Applications
+#consider making a cask for these
 curl -L http://papersapp.com/papers2/download -o ~/Downloads/papers_281.dmg
+#depreciate this
 curl -L http://support.apple.com/downloads/DL923/en_US/QuickTimePlayer7.6.6_SnowLeopard.dmg -o ~/Downloads/QuickTimePlayer7.6.6_SnowLeopard.dmg
 curl -L https://downloads.omnigroup.com/software/MacOSX/10.10/OmniGraffle-6.6.2.dmg
 
-brew install mas
-mas lucky garageband
-mas lucky imovie
+#brew install mas
+#mas lucky garageband
+#mas lucky imovie
+
 
 open ~/Downloads/*.dmg
 open ~/Applications/*.app
 open ~/Dropbox/_*.txt
+
+
+
+#after Adobe CS6 install. I should make a cask to install
+cp -R /Applications/Adobe\ Premiere\ Pro\ CS6/Adobe\ Premiere\ Pro\ CS6.app/Contents/Frameworks/amtlib.framework{,.bak}
+
+cp -R /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app/Contents/Frameworks/amtlib.framework{,.bak}
+
+cp -R /Applications/Adobe\ InDesign\ CS6/Adobe\ InDesign\ CS6.app/Contents/Frameworks/amtlib.framework{,.bak}
+
+cp -R /Applications/Adobe\ Illustrator\ CS6/Adobe\ Illustrator.app/Contents/Frameworks/amtlib.framework{,.bak}
+
+sudo rm -r /Applications/Adobe\ Illustrator\ CS6/Adobe\ Illustrator.app/Contents/Frameworks/amtlib.framework
+sudo rm -r /Applications/Adobe\ InDesign\ CS6/Adobe\ InDesign\ CS6.app/Contents/Frameworks/amtlib.framework
+sudo rm -r /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app/Contents/Frameworks/amtlib.framework
+sudo rm -r /Applications/Adobe\ Premiere\ Pro\ CS6/Adobe\ Premiere\ Pro\ CS6.app/Contents/Frameworks/amtlib.framework
+
+cp -R /Volumes/Adobe\ CS6\ Master\ Collection\ \(Mac\)/amtlib.framework /Applications/Adobe\ Premiere\ Pro\ CS6/Adobe\ Premiere\ Pro\ CS6.app/Contents/Frameworks/amtlib.framework
+
+cp -R /Volumes/Adobe\ CS6\ Master\ Collection\ \(Mac\)/amtlib.framework /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app/Contents/Frameworks/
+
+cp -R /Volumes/Adobe\ CS6\ Master\ Collection\ \(Mac\)/amtlib.framework /Applications/Adobe\ InDesign\ CS6/Adobe\ InDesign\ CS6.app/Contents/Frameworks/
+
+cp -R /Volumes/Adobe\ CS6\ Master\ Collection\ \(Mac\)/amtlib.framework /Applications/Adobe\ Illustrator\ CS6/Adobe\ Illustrator.app/Contents/Frameworks/
 
 curl -L https://github.com/kcrawford/dockutil/archive/master.zip -o dockutil-master.zip
 unzip dockutil-master.zip
 cd dockutil-master/scripts/
 mv dockutil dockutil.py
 python dockutil.py --remove all
-python dockutil.py --add /Applications/Utilities/Activity\ Monitor.app
+#OS stuff
+python dockutil.py --add /Applications/System\ Preferences.app --no-restart
+python dockutil.py --add /Applications/Utilities/Activity\ Monitor.app --no-restart
+python dockutil.py --add /Applications/Utilities/System\ Information.app --no-restart
+
+#basic
+python dockutil.py --add /Applications/Calendar.app --no-restart
+python dockutil.py --add /Applications/Calculator.app --no-restart
+python dockutil.py --add /Users/seanth/Applications/Slack.app --no-restart
+
+#programming
+python dockutil.py --add /Applications/Utilities/Terminal.app --no-restart
+python dockutil.py --add /Users/seanth/Applications/Hex Fiend.app --no-restart
+python dockutil.py --add /Applications/TextEdit.app --no-restart
+python dockutil.py --add /Users/seanth/Applications/Sublime\ Text.app --no-restart
+python dockutil.py --add /Users/seanth/Applications/GitHub\ Desktop.app --no-restart
+
+#video
+python dockutil.py --add /Applications/Utilities/QuickTime\ Player\ 7.app --no-restart
+python dockutil.py --add /Applications/QuickTime\ Player.app --no-restart
+python dockutil.py --add /Users/seanth/Applications/VLC.app --no-restart
+python dockutil.py --add /Applications/iMovie.app --no-restart
+
+#audio
+python dockutil.py --add /Applications/Utilities/Audio\ MIDI\ Setup.app --no-restart
+python dockutil.py --add /Users/seanth/Applications/Nicecast.app --no-restart
+python dockutil.py --add /Users/seanth/Applications/Audio\ Hijack.app --no-restart
+python dockutil.py --add /Applications/GarageBand.app --no-restart
+python dockutil.py --add /Applications/iTunes.app --no-restart
+
+#microsoft stuff goes here
+
+
+#graphics
+python dockutil.py --add /Users/seanth/Applications/OmniGraffle.app --no-restart
+#adobe stuff goes here
+python dockutil.py --add /Applications/Adobe\ Illustrator\ CS6/Adobe\ Illustrator.app --no-restart
+python dockutil.py --add /Applications/Adobe\ InDesign\ CS6/Adobe\ InDesign\ CS6.app --no-restart
+python dockutil.py --add /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app --no-restart
+python dockutil.py --add /Applications/Adobe\ Premiere\ Pro\ CS6/Adobe\ Premiere\ Pro\ CS6.app --no-restart
+
+#other
+python dockutil.py --add /Users/seanth/Applications/Google\ Chrome.app --no-restart
+python dockutil.py --add /Users/seanth/Applications/Google\ Earth\ Pro.app --no-restart
+python dockutil.py --add /Users/seanth/Applications/Steam.app
+
+
