@@ -1,0 +1,148 @@
+#!/bin/bash
+
+<<<<<<< HEAD
+mkdir Applications
+
+sudo softwareupdate --install-rosetta
+=======
+#let's install xcode
+#xcode-select --install
+
+mkdir Applications
+>>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
+
+#install homebrew
+#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+<<<<<<< HEAD
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/tester/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/tester/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+=======
+>>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
+
+brew install gcc
+brew install python3
+brew install ffmpeg
+brew tap kn1kn1/cfdg
+brew install kn1kn1/cfdg/cfdg
+<<<<<<< HEAD
+brew install mas
+###x86_64 needed
+#brew install pypy
+
+#get dropbox set up and syncing ASAP
+brew install --cask dropbox --appdir=~/Applications
+Say "ping"
+open ~/Applications/Dropbox.app
+=======
+brew install pypy
+
+#get dropbox set up and syncing ASAP
+brew install --cask dropbox --appdir=~/Applications
+open Dropbox.app
+>>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
+
+brew install --cask google-chrome --appdir=~/Applications
+brew install --cask vlc --appdir=~/Applications
+brew install --cask sublime-text --appdir=~/Applications
+brew install --cask resilio-sync --appdir=~/Applications
+<<<<<<< HEAD
+brew install --cask google-earth-pro
+=======
+brew install --cask google-earth-pro --appdir=~/Applications
+>>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
+brew install --cask omnigraffle --appdir=~/Applications
+brew install --cask context-free --appdir=~/Applications
+brew install --cask steam --appdir=~/Applications
+brew install --cask hex-fiend --appdir=~/Applications
+brew install --cask github --appdir=~/Applications
+brew install --cask slack --appdir=~/Applications
+brew install --cask audio-hijack --appdir=~/Applications
+brew install --cask miniconda --appdir=~/Applications
+<<<<<<< HEAD
+brew install --cask zoom
+=======
+brew install --cask zoom --appdir=~/Applications
+>>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
+
+
+###mas requires Swift 5 runtime support
+curl -L  https://updates.cdn-apple.com/2019/cert/061-41823-20191025-5efc5a59-d7dc-46d3-9096-396bb8cb4a73/SwiftRuntimeForCommandLineTools.dmg -o ~/Downloads/SwiftRuntimeForCommandLineTools.dmg
+
+curl -L https://www.python.org/ftp/python/2.7.18/python-2.7.18-macosx10.9.pkg -o ~/Downloads/python-2.7.18-macosx10.9.pkg
+curl -L https://github.com/kcrawford/dockutil/releases/download/3.0.2/dockutil-3.0.2.pkg -o ~/Downloads/dockutil-3.0.2.pkg
+curl -L https://bootstrap.pypa.io/pip/2.7/get-pip.py -o ~/Downloads/get-pip2.7.py
+curl -L https://bootstrap.pypa.io/get-pip.py -o ~/Downloads/get-pip.py
+
+<<<<<<< HEAD
+open ~/Applications/*.app
+open ~/Dropbox/_*.txt
+open ~/Downloads/*.dmg
+open ~/Downloads/*.pkg
+Say "ping"
+
+python ~/Downloads/get-pip2.7.py
+python3 ~/Downloads/get-pip.py
+python3 -m pip install --upgrade pip
+
+mas lucky GarageBand
+mas lucky iMovie 
+mas lucky "Microsoft Word"
+mas lucky "Microsoft Excel"
+mas lucky "Microsoft Powerpoint"
+#for some reason mas doesn't like "lucky Clocker"
+mas install 1056643111
+open /Applications/Clocker.app 
+Say "ping"
+
+dockutil --remove all --no-restart
+dockutil --add /Applications/"System Preferences.app" --no-restart
+dockutil --add /Applications/Utilities/"Activity Monitor.app" --no-restart
+dockutil --add /Applications/Utilities/"System Information.app" --no-restart
+dockutil --add /Applications/Utilities/"Activity Monitor.app" --no-restart
+dockutil --add /Applications/"Calendar.app" --no-restart
+dockutil --add /Applications/"Calculator.app" --no-restart
+dockutil --add /Applications/"Preview.app" --no-restart
+dockutil --add ./Applications/"Slack.app" --no-restart
+dockutil --add /Applications/"zoom.us.app" --no-restart
+dockutil --add /Applications/Utilities/"Terminal.app" --no-restart
+dockutil --add ./Applications/"Hex Fiend.app" --no-restart
+dockutil --add /Applications/"TextEdit.app" --no-restart
+dockutil --add ./Applications/"Sublime Text.app" --no-restart
+dockutil --add ./Applications/"GitHub Desktop.app" --no-restart
+dockutil --add /Applications/"QuickTime Player.app" --no-restart
+dockutil --add ./Applications/"VLC.app" --no-restart
+dockutil --add /Applications/"iMovie.app" --no-restart
+dockutil --add ./Applications/"Audio Hijack.app" --no-restart
+dockutil --add /Applications/"GarageBand.app" --no-restart
+dockutil --add /Applications/"Music.app" --no-restart
+dockutil --add /Applications/"Books.app" --no-restart
+dockutil --add /Applications/"Microsoft Excel.app" --no-restart
+dockutil --add /Applications/"Microsoft Word.app" --no-restart
+dockutil --add /Applications/"Microsoft PowerPoint.app" --no-restart
+dockutil --add ./Applications/"OmniGraffle.app" --no-restart
+dockutil --add ./Applications/"Google Chrome.app" --no-restart
+dockutil --add /Applications/"Google Earth Pro.app" --no-restart
+dockutil --add /Applications/"Photo Booth.app" --no-restart
+dockutil --add ./Applications/"Steam.app" --no-restart
+dockutil --add /Users/tester/Downloads --before Trash
+
+say "done" 
+=======
+#brew tap mas-cli/tap
+#brew install mas-cli/tap/mas
+brew install mas
+# mas lucky garageband
+# mas lucky imovie
+
+python ~/Downloads/get-pip2.7.py
+python3 ~/Downloads/get-pip.py
+pypy ~/Downloads/get-pip.py
+pypy -m pip install git+https://bitbucket.org/pypy/numpy.git
+
+open ~/Downloads/*.dmg
+open ~/Downloads/*.pkg
+open ~/Applications/*.app
+open ~/Dropbox/_*.txt
+>>>>>>> f73acab703edfcf60c6e773ebbd289c207b54bbd
