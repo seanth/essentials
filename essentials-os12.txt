@@ -1,5 +1,7 @@
 #!/bin/bash
 
+defaults write com.apple.PowerChime ChimeOnNoHardware -bool true;killall PowerChime
+
 mkdir Applications
 
 sudo softwareupdate --install-rosetta
